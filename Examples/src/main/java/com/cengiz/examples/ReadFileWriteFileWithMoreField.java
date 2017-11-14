@@ -6,14 +6,23 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class ReadFileWriteFileWithMoreField {
 
 	public static void main(String[] args) {
 
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+		LocalDateTime now = LocalDateTime.now();
+		String currDate = dtf.format(now);
+
+		System.out.println(currDate);
+
 		try (FileReader fr = new FileReader("/Users/cengizuzer/git/javaTutorial/Examples/input/dummyData.csv");
 				BufferedReader br = new BufferedReader(fr);
-				FileWriter fw = new FileWriter("/Users/cengizuzer/git/javaTutorial/Examples/output/dummyDataOut.csv");
+				FileWriter fw = new FileWriter(
+						"/Users/cengizuzer/git/javaTutorial/Examples/output/dummyDataOut_" + currDate + ".csv");
 				BufferedWriter bw = new BufferedWriter(fw);
 
 		) {
