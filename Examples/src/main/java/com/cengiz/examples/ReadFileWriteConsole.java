@@ -9,7 +9,7 @@ public class ReadFileWriteConsole {
 
 	public static void main(String[] args) {
 
-		try (FileReader fis = new FileReader("/Users/cengizuzer/git/javaTutorial/Examples/input/dummyData.csv");
+		try (FileReader fis = new FileReader("input/dummyData.csv");
 				BufferedReader br = new BufferedReader(fis)) {
 
 			// skip headers
