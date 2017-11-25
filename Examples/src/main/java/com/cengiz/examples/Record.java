@@ -6,13 +6,13 @@ public class Record {
 	private String name;
 	private String email;
 	private String date;
-	
+
 	public Record(Long id, String name, String email, String date) {
 		this.Id = id;
 		this.name = name;
 		this.email = email;
 		this.date = date;
-		
+
 	}
 
 	public Long getId() {
@@ -51,7 +51,4 @@ public class Record {
 	public String toString() {
 		return "Record [Id=" + Id + ", name=" + name + ", email=" + email + ", date=" + date + "]";
 	}
-	
-	
-
 }
