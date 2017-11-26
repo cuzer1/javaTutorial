@@ -34,7 +34,7 @@ public class ReadFromFileWritetoJSONFile {
 					String[] l = line.split(",");
 
 					generator.writeStartObject();
-					generator.writeStringField(hdr[0], l[0]);
+					generator.writeNumberField(hdr[0], Long.parseLong(l[0]));
 					generator.writeStringField(hdr[1], l[1]);
 					generator.writeStringField(hdr[2], l[2]);
 					generator.writeStringField(hdr[3], l[3]);
